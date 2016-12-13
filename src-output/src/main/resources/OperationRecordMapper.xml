@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace=".mapper.OperationRecordMapper">
+
+	<resultMap id="OperationRecord" type=".model.OperationRecord">
+        <result property="operationRecordId" column="operation_record_id"/>
+        <result property="userId" column="user_id"/>
+        <result property="ipAddr" column="ip_addr"/>
+        <result property="operationTime" column="operation_time"/>
+        <result property="operationMove" column="operation_move"/>
+        <result property="operationStatus" column="operation_status"/>
+        <result property="operationResult" column="operation_result"/>
+        <result property="operationType" column="operation_type"/>
+        <result property="operationRemark" column="operation_remark"/>
+        <result property="ext1" column="ext1"/>
+        <result property="ext2" column="ext2"/>
+	</resultMap>
+	
+	<sql id="OperationRecordColumns">
+	    <![CDATA[
+		operation_record_id,user_id,ip_addr,operation_time,operation_move,operation_status,operation_result,operation_type,operation_remark,ext1,ext2
+	    ]]>
+	</sql>
+
+	<insert id="insert" useGeneratedKeys="true" keyProperty="operation_record_id">
+    <![CDATA[
+        INSERT INTO operation_record (
+        	operation_record_id ,
+        	user_id ,
+        	ip_addr ,
+        	operation_time ,
+        	operation_move ,
+        	operation_status ,
+        	operation_result ,
+        	operation_type ,
+        	operation_remark ,
+        	ext1 ,
+        	ext2 
+        ) VALUES (
+        	#{operationRecordId} ,
+        	#{userId} ,
+        	#{ipAddr} ,
+        	#{operationTime} ,
+        	#{operationMove} ,
+        	#{operationStatus} ,
+        	#{operationResult} ,
+        	#{operationType} ,
+        	#{operationRemark} ,
+        	#{ext1} ,
+        	#{ext2} 
+        )
+    ]]>
+	</insert>
+    
+	<update id="update" >
+    <![CDATA[
+        UPDATE operation_record SET
+	        user_id = #{userId} ,
+	        ip_addr = #{ipAddr} ,
+	        operation_time = #{operationTime} ,
+	        operation_move = #{operationMove} ,
+	        operation_status = #{operationStatus} ,
+	        operation_result = #{operationResult} ,
+	        operation_type = #{operationType} ,
+	        operation_remark = #{operationRemark} ,
+	        ext1 = #{ext1} ,
+	        ext2 = #{ext2} 
+        WHERE 
+	        operation_record_id = #{operationRecordId} 
+    ]]>
+	</update>
+
+    <delete id="delete">
+    <![CDATA[
+        DELETE FROM operation_record WHERE
+        operation_record_id = #{id} 
+    ]]>
+    </delete>
+    
+    <select id="getById" resultMap="OperationRecord">
+		SELECT <include refid="OperationRecordColumns" />
+	    <![CDATA[
+		    FROM operation_record 
+	        WHERE 
+		        operation_record_id = #{id} 
+	    ]]>
+	</select>
+	
+	<sql id="OperationRecordFindPageWhere">
+		<where>
+	       <if test="@Ognl@isNotEmpty(operation_record_id)">
+				AND operation_record_id = #{operation_record_id}
+			</if>
+	       <if test="@Ognl@isNotEmpty(user_id)">
+				AND user_id = #{user_id}
+			</if>
+	       <if test="@Ognl@isNotEmpty(ip_addr)">
+				AND ip_addr = #{ip_addr}
+			</if>
+	       <if test="@Ognl@isNotEmpty(operationTimeBegin)">
+				AND operation_time >= #{operationTimeBegin}
+		   </if>
+		   <if test="@Ognl@isNotEmpty(operationTimeEnd)">
+				AND operation_time &lt;= #{operationTimeEnd}
+		   </if>
+	       <if test="@Ognl@isNotEmpty(operation_move)">
+				AND operation_move = #{operation_move}
+			</if>
+	       <if test="@Ognl@isNotEmpty(operation_status)">
+				AND operation_status = #{operation_status}
+			</if>
+	       <if test="@Ognl@isNotEmpty(operation_result)">
+				AND operation_result = #{operation_result}
+			</if>
+	       <if test="@Ognl@isNotEmpty(operation_type)">
+				AND operation_type = #{operation_type}
+			</if>
+	       <if test="@Ognl@isNotEmpty(operation_remark)">
+				AND operation_remark = #{operation_remark}
+			</if>
+	       <if test="@Ognl@isNotEmpty(ext1)">
+				AND ext1 = #{ext1}
+			</if>
+	       <if test="@Ognl@isNotEmpty(ext2)">
+				AND ext2 = #{ext2}
+			</if>
+		</where>
+	</sql>
+
+    <select id="list" resultMap="OperationRecord">
+    	SELECT <include refid="OperationRecordColumns" />
+	    FROM operation_record 
+		<include refid="OperationRecordFindPageWhere"/>
+		
+		<if test="@Ognl@isNotEmpty(sortColumns)">
+			ORDER BY ${sortColumns}
+		</if>
+    </select>
+
+</mapper>
+

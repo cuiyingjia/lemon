@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- DBUnit flatXml DataFile -->
+<dataset>
+
+
+	  <operation_record 
+			operation_record_id='603' 
+			user_id='219' 
+			ip_addr='IpAddr080' 
+			operation_time='2016-11-21 14:37:11.923' 
+			operation_move='OperationMove851' 
+			operation_status='OperationStatus367' 
+			operation_result='OperationResult936' 
+			operation_type='OperationType501' 
+			operation_remark='OperationRemark018' 
+			ext1='Ext1377' 
+			ext2='Ext2397' 
+	  />	
+  
+</dataset>
