@@ -17,8 +17,6 @@ import cn.springside.lemon.util.typemapping.JdbcType;
 
 /**
  * 用于生成代码的Columb对象.对应数据库表column
- * @author badqiu
- * @email badqiu(a)gmail.com
  */
 public class Column implements java.io.Serializable,Cloneable{
 	/**

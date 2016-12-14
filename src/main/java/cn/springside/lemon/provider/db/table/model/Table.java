@@ -13,8 +13,6 @@ import cn.springside.lemon.util.StringHelper;
 
 /**
  * 用于生成代码的Table对象.对应数据库的table
- * @author badqiu
- * @email badqiu(a)gmail.com
  */
 public class Table implements java.io.Serializable,Cloneable {
 

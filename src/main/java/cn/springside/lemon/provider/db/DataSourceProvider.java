@@ -12,7 +12,7 @@ import javax.sql.DataSource;
 import cn.springside.lemon.GeneratorProperties;
 /**
  * 用于提供生成器的数据源
- * 
+ *
  * @author badqiu
  *
  */
@@ -83,8 +83,8 @@ public class DataSourceProvider {
 			throw new UnsupportedOperationException("getLoginTimeout");
 		}
 
-		@Override
-		public Logger getParentLogger() throws SQLFeatureNotSupportedException {
+
+		public Logger getParentLogger() {
 			return null;
 		}
 

@@ -34,8 +34,6 @@ import cn.springside.lemon.util.XMLHelper.NodeData;
  * getTable(sqlName) : 根据数据库表名,得到table对象
  * getAllTable() : 搜索数据库的所有表,并得到table对象列表
  * </pre>
- * @author badqiu
- * @email badqiu(a)gmail.com
  */
 public class TableFactory {
 	

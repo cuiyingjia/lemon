@@ -1,15 +1,11 @@
-<%@page import="${basepackage}.model.*" %>
-<#include "/macro.include"/> 
+<#include "/macro.include"/>
 <#include "/custom.include"/> 
 <#assign className = table.className>   
 <#assign classNameLowerCase = className?lower_case>
 
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib tagdir="/WEB-INF/tags/simpletable" prefix="simpletable"%>
-<%@ include file="/commons/taglibs.jsp" %>
 
-<rapid:override name="head">
 	<title><%=${className}.TABLE_ALIAS%> 维护</title>
 	
 	<script src="<@jspEl 'ctx'/>/scripts/rest.js" ></script>
@@ -22,9 +18,7 @@
 			window.simpleTable = new SimpleTable('queryForm',<@jspEl 'page.thisPageNumber'/>,<@jspEl 'page.pageSize'/>,'<@jspEl 'pageRequest.sortColumns'/>');
 		});
 	</script>
-</rapid:override>
 
-<rapid:override name="content">
 	<form id="queryForm" name="queryForm" method="get" style="display: inline;">
 	<div class="queryPanel">
 		<fieldset>
@@ -118,7 +112,3 @@
 		
 	</div>
 	</form>
-</rapid:override>
-
-<%-- jsp模板继承,具体使用请查看: http://code.google.com/p/rapid-framework/wiki/rapid_jsp_extends --%>
-<%@ include file="base.jsp" %>

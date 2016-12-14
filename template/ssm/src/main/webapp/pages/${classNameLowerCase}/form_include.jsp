@@ -1,9 +1,7 @@
-<%@page import="${basepackage}.model.*" %>
-<#include "/macro.include"/> 
+<#include "/macro.include"/>
 <#assign className = table.className>   
 <#assign classNameLower = className?uncap_first>
 <%@ page contentType="text/html;charset=UTF-8" %>
-<%@ include file="/commons/taglibs.jsp" %>
 
 <#list table.columns as column>
 <#if column.htmlHidden>
