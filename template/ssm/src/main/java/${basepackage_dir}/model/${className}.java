@@ -14,12 +14,6 @@ public class ${className}  implements java.io.Serializable{
 	public static final String ALIAS_${column.constantName} = "${column.columnAlias}";
 	</#list>
 
-//	<#list table.columns as column>
-//	<#if column.isDateTimeColumn>
-//	public static final String FORMAT_${column.constantName} = DATE_FORMAT;
-//	</#if>
-//	</#list>
-
 	<#list table.columns as column>
 	private ${column.javaType} ${column.columnNameLower}; //${column.columnAlias!}
 	</#list>
