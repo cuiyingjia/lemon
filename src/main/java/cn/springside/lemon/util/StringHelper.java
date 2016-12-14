@@ -11,11 +11,6 @@ import java.util.regex.Pattern;
 
 import cn.springside.lemon.provider.db.table.model.Column;
 
-/**
- * 
- * @author badqiu
- * @email badqiu(a)gmail.com
- */
 public class StringHelper {
 	
 	public static String removeCrlf(String str) {

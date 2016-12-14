@@ -21,7 +21,6 @@ import cn.springside.lemon.util.GLogger;
 import cn.springside.lemon.util.GeneratorException;
 /**
  * 
- * @author badqiu
  *
  */
 public class GeneratorFacade {

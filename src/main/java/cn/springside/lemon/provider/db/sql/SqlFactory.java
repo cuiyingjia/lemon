@@ -38,8 +38,6 @@ import cn.springside.lemon.util.sqlparse.ResultSetMetaDataHolder;
  * Sql sql = new SqlFactory().parseSql("select * from user_info where username=#username# and password=#password#");
  * </pre>
  * 
- * @author badqiu
- *
  */
 public class SqlFactory {
     

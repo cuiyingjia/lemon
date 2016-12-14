@@ -27,7 +27,6 @@ import cn.springside.lemon.util.sqlparse.SqlTypeChecker;
  * </pre>
  * 
  * @see SqlFactory
- * @author badqiu
  *
  */
 public class Sql {

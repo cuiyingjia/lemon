@@ -3,11 +3,7 @@ package cn.springside.lemon.util.typemapping;
 
 import java.sql.Types;
 import java.util.HashMap;
-/**
- * 
- * @author badqiu
- * @email badqiu(a)gmail.com
- */
+
 public class DatabaseDataTypesUtils {
 
 	private final static IntStringMap _preferredJavaTypeForSqlType = new IntStringMap();

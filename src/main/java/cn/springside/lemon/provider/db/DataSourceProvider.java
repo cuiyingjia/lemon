@@ -13,8 +13,6 @@ import cn.springside.lemon.GeneratorProperties;
 /**
  * 用于提供生成器的数据源
  *
- * @author badqiu
- *
  */
 public class DataSourceProvider {
 	private static Connection connection;

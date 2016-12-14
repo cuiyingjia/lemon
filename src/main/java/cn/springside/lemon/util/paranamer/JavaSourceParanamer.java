@@ -15,7 +15,6 @@ import cn.springside.lemon.util.StringHelper;
 
 /**
  * get parameter names from java source file
- * @author badqiu
  */
 public class JavaSourceParanamer implements Paranamer{
     private ClassLoader classLoader;

@@ -16,8 +16,7 @@ import cn.springside.lemon.util.typemapping.DatabaseTypeUtils;
 /**
  * 生成器配置类
  * 用于装载generator.properties,generator.xml文件
- * @author badqiu
- * @email badqiu(a)gmail.com
+ *
  */
 public class GeneratorProperties {
 	static PropertyPlaceholderHelper helper = new PropertyPlaceholderHelper("${", "}", ":", false);

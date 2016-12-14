@@ -15,8 +15,7 @@ import java.io.File;
  * </pre>
  * 
  * ${gg.setIgnoreOutput(true)}将设置为true如果不生成
- * 
- * @author badqiu
+ *
  *
  */
 public class GeneratorControl {

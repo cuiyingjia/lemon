@@ -107,7 +107,7 @@ public abstract class NamedParameterUtils {
 						namedParameterCount++;
 					}
 					
-					String removedPrefixAndSuffixParameter = removePrefixAndSuffix(c,parameter,sql); //add by badqiu
+					String removedPrefixAndSuffixParameter = removePrefixAndSuffix(c,parameter,sql); //
 					
 					parsedSql.addNamedParameter(removedPrefixAndSuffixParameter,c+parameter, i, j);
 					totalParameterCount++;
@@ -128,7 +128,7 @@ public abstract class NamedParameterUtils {
 		return parsedSql;
 	}
 
-	//add by badqiu,增加是否需要强制要有#后缀用于ibatis2
+	//增加是否需要强制要有#后缀用于ibatis2
 	private static String removePrefixAndSuffix(char startPrifix,String parameter,String sql) {
 		//for spring jdbc
 		if(startPrifix == ':' || startPrifix == '&') {
@@ -270,16 +270,16 @@ public abstract class NamedParameterUtils {
 		return false;
 	}
 	
-	/** by badqiu,FIXME: delete me */
-	static Pattern PATTERN = Pattern.compile(":([\\w_]*):([\\w_]*)");
-	public static Map getNamedParameters(String sql) {
-		Map map = new LinkedHashMap();
-		Matcher m =  PATTERN.matcher(sql);
-		if(m.find()) {
-			map.put(m.group(1), m.group(2));
-		}
-		return map;
-	}
+
+//	static Pattern PATTERN = Pattern.compile(":([\\w_]*):([\\w_]*)");
+//	public static Map getNamedParameters(String sql) {
+//		Map map = new LinkedHashMap();
+//		Matcher m =  PATTERN.matcher(sql);
+//		if(m.find()) {
+//			map.put(m.group(1), m.group(2));
+//		}
+//		return map;
+//	}
 
 
 }

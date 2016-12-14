@@ -35,9 +35,7 @@ import freemarker.template.TemplateException;
  * generateBy() 用于生成文件
  * deleteBy() 用于删除生成的文件
  * </pre>
- * 
- * @author badqiu
- * @email badqiu(a)gmail.com
+ *
  */
 public class Generator {
 	private static final String GENERATOR_INSERT_LOCATION = "generator-insert-location";

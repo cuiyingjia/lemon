@@ -668,7 +668,6 @@ public class Column implements java.io.Serializable,Cloneable{
 	 * 		private String key;
 	 * 		private String value;
 	 * }
-	 * @author badqiu
 	 */
 	public static class EnumMetaDada {
 		private String enumAlias;

@@ -2,11 +2,7 @@ package cn.springside.lemon.util;
 
 import java.sql.Timestamp;
 
-/**
- * 
- * @author badqiu
- *
- */
+
 public class TestDataGenerator {
 
 	public String getDBUnitTestData(String columnName,String javaType, int size) {

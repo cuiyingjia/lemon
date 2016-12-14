@@ -41,7 +41,6 @@ import org.xml.sax.SAXException;
  *        Map attributes = new HashMap();
  *        List<NodeData> childs = new ArrayList();
  * </pre>
- * @author badqiu
  */
 public class XMLHelper {
 
@@ -285,7 +284,7 @@ public class XMLHelper {
     
     /**
      * 解析attributes为hashMap
-     * @param attributes 格式： name='badqiu' sex='F'
+     * @param attributes 格式： name='name' sex='M'
      * @return
      */
     public static Map<String, String> parse2Attributes(String attributes) {

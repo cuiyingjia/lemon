@@ -3,7 +3,6 @@ package cn.springside.lemon.util.typemapping;
 import java.sql.Types;
 /**
  * 用于ibatis的JdbcType
- * @author badqiu
  */
 public enum JdbcType {
 

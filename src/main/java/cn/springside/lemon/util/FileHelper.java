@@ -16,11 +16,6 @@ import java.util.List;
 import java.util.Set;
 
 import cn.springside.lemon.GeneratorProperties;
-/**
- * 
- * @author badqiu
- * @email badqiu(a)gmail.com
- */
 public class FileHelper {
 	/**
 	 * 得到相对路径

@@ -17,10 +17,6 @@ import java.util.Set;
 import cn.springside.lemon.util.StringHelper;
 import cn.springside.lemon.util.typemapping.JavaImport;
 
-/**
- * 
- * @author badqiu,Linlin Yu
- */
 public class JavaMethod {
 	Method method;
 	private JavaClass clazz; //与method相关联的class
